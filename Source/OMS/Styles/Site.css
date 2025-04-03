@@ -1,0 +1,958 @@
+﻿body
+{
+    min-height: 100%;
+    padding-top: 70px;
+    font-family: "メイリオ", Meiryo, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, sans-serif;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html
+{
+    position: relative;
+    min-height: 100%;
+}
+body
+{
+    /* Margin bottom by footer height */
+    margin-bottom: 50px;
+}
+.footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Set the fixed height of the footer here */
+    height: 50px;
+    background-color: #f5f5f5;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container
+{
+    padding: 0px 15px 0;
+}
+.container .text-muted
+{
+    margin: 10px 0;
+}
+
+.footer > .container
+{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code
+{
+    font-size: 80%;
+}
+
+
+.negative-num
+{
+    color: Red;
+}
+
+.input-code.upper
+{
+    text-transform: uppercase;
+}
+
+#loading
+{
+    background: url("../Images/loading.GIF") no-repeat scroll center center #ffffff;
+    z-index: 10;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+}
+
+.modal-vertical-centered
+{
+    margin-top: 17%;
+}
+
+/* Custom label-delivery
+-------------------------------------------------- */
+.label-delivery
+{
+    background-color: #98CC00;
+}
+.label-delivery[href]:hover, .label-delivery[href]:focus
+{
+    background-color: #87B305;
+}
+
+/* Custom label-master
+-------------------------------------------------- */
+.label-master
+{
+    background-color: #ACACAC;
+}
+.label-master[href]:hover, .label-master[href]:focus
+{
+    background-color: #A3A3A3;
+}
+
+/* Custom btn-export
+-------------------------------------------------- */
+.btn-export
+{
+    color: #fff;
+    background-color: #9360b0;
+    border-color: #6f5499;
+}
+.btn-export:hover, .btn-export:focus, .btn-export:active, .btn-export.active, .open > .dropdown-toggle.btn-export
+{
+    color: #fff;
+    background-color: #7d459c;
+    border-color: #62307e;
+}
+.btn-export:active, .btn-export.active, .open > .dropdown-toggle.btn-export
+{
+    background-image: none;
+}
+.btn-export.disabled, .btn-export[disabled], fieldset[disabled] .btn-export, .btn-export.disabled:hover, .btn-export[disabled]:hover, fieldset[disabled] .btn-export:hover, .btn-export.disabled:focus, .btn-export[disabled]:focus, fieldset[disabled] .btn-export:focus, .btn-export.disabled:active, .btn-export[disabled]:active, fieldset[disabled] .btn-export:active, .btn-export.disabled.active, .btn-export[disabled].active, fieldset[disabled] .btn-export.active
+{
+    background-color: #9360b0;
+    border-color: #6f5499;
+}
+.btn-export .badge
+{
+    color: #9360b0;
+    background-color: #fff;
+}
+
+/* Custom btn-delivery
+-------------------------------------------------- */
+.btn-delivery
+{
+    color: #fff;
+    background-color: #98CC00;
+    border-color: #8dbd01;
+}
+.btn-delivery:hover, .btn-delivery:focus, .btn-delivery:active, .btn-delivery.active, .open > .dropdown-toggle.btn-delivery
+{
+    color: #fff;
+    background-color: #87B305;
+    border-color: #769c05;
+}
+.btn-delivery:active, .btn-delivery.active, .open > .dropdown-toggle.btn-delivery
+{
+    background-image: none;
+}
+.btn-delivery.disabled, .btn-delivery[disabled], fieldset[disabled] .btn-delivery, .btn-delivery.disabled:hover, .btn-delivery[disabled]:hover, fieldset[disabled] .btn-delivery:hover, .btn-delivery.disabled:focus, .btn-delivery[disabled]:focus, fieldset[disabled] .btn-delivery:focus, .btn-delivery.disabled:active, .btn-delivery[disabled]:active, fieldset[disabled] .btn-delivery:active, .btn-delivery.disabled.active, .btn-delivery[disabled].active, fieldset[disabled] .btn-delivery.active
+{
+    background-color: #98CC00;
+    border-color: #8dbd01;
+}
+.btn-delivery .badge
+{
+    color: #98CC00;
+    background-color: #fff;
+}
+
+/* Custom btn-agreement
+-------------------------------------------------- */
+.btn-agreement
+{
+    color: #fff;
+    background-color: #868e96;
+    border-color: #868e96;
+}
+
+.btn-agreement:hover, .btn-agreement:focus, .btn-agreement:active, .btn-agreement.active, .open > .dropdown-toggle.btn-agreement
+{
+    color: #fff;
+    background-color: #727b84;
+    border-color: #6c757d;
+}
+.btn-agreement:active, .btn-agreement.active, .open > .dropdown-toggle.btn-agreement
+{
+    background-image: none;
+}
+.btn-agreement.disabled, .btn-agreement[disabled], fieldset[disabled] .btn-agreement, .btn-agreement.disabled:hover, .btn-agreement[disabled]:hover, fieldset[disabled] .btn-agreement:hover, .btn-agreement.disabled:focus, .btn-agreement[disabled]:focus, fieldset[disabled] .btn-agreement:focus, .btn-agreement.disabled:active, .btn-agreement[disabled]:active, fieldset[disabled] .btn-agreement:active, .btn-agreement.disabled.active, .btn-agreement[disabled].active, fieldset[disabled] .btn-agreement.active
+{
+    background-color: #868e96;
+    border-color: #868e96;
+}
+.btn-agreement .badge
+{
+    color: #868e96;
+    background-color: #fff;
+}
+
+/* Custom row-finish
+-------------------------------------------------- */
+.table > thead > tr > td.finish, .table > tbody > tr > td.finish, .table > tfoot > tr > td.finish, .table > thead > tr > th.finish, .table > tbody > tr > th.finish, .table > tfoot > tr > th.finish, .table > thead > tr.finish > td, .table > tbody > tr.finish > td, .table > tfoot > tr.finish > td, .table > thead > tr.finish > th, .table > tbody > tr.finish > th, .table > tfoot > tr.finish > th
+{
+    background-color: #C3C3C3;
+}
+.table-hover > tbody > tr > td.finish:hover, .table-hover > tbody > tr > th.finish:hover, .table-hover > tbody > tr.finish:hover > td, .table-hover > tbody > tr:hover > .finish, .table-hover > tbody > tr.finish:hover > th
+{
+    background-color: #ACACAC;
+}
+/* Custom alert-finish
+-----------------------------------------------------*/
+.alert-finish
+{
+    color: #8b7777;
+    background-color: #C3C3C3;
+    border-color: #b6b4b4;
+}
+.alert-finish hr
+{
+    border-top-color: #c3bcbc;
+}
+.alert-finish .alert-link
+{
+    color: #817a7a;
+}
+/* Custom label-view
+-----------------------------------------------------*/
+.label-view
+{
+    background-color: #984db2;
+}
+.label-view[href]:hover, .label-view[href]:focus
+{
+    background-color: #8f33b0;
+}
+
+/* Custom label-white
+-----------------------------------------------------*/
+.label-white
+{
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #fff;
+    font-weight: normal;
+}
+
+.label-white[href]:hover, .label-white[href]:focus
+{
+    color: #333;
+    background-color: #e6e6e6;
+    border: 1px solid #adadad;
+    font-weight: normal;
+}
+/* Custom div-tab-content
+-----------------------------------------------------*/
+.div-tab-content
+{
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
+}
+/* Custom div-tab-pane
+-----------------------------------------------------*/
+.div-tab-pane
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*----------------------------------------*/
+.modal-content
+{
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.modal-body
+{
+    position: absolute;
+    top: 55px;
+    bottom: 65px;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+}
+.modal-footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.modal-dialog
+{
+    
+    top: 50%;
+    transform: translate(0, -50%) !important;
+    -ms-transform: translate(0, -50%) !important;
+    -webkit-transform: translate(0, -50%) !important;
+}
+/*----------------------------------------*/
+
+@media (max-width:767px)
+{
+    .modalAlert .modal-dialog
+    {
+        margin: auto 15%;
+        width: 70%;
+        height: 215px;
+    }
+}
+@media (min-width: 768px)
+{
+    .modalAlert .modal-dialog
+    {
+        margin: auto 15%;
+        width: 70%;
+        height: 215px;
+    }
+}
+@media (min-width: 992px)
+{
+    .modalAlert .modal-dialog
+    {
+        margin: auto 20%;
+        width: 60%;
+        height: 215px;
+    }
+}
+@media (min-width: 1200px)
+{
+    .modalAlert .modal-dialog
+    {
+        margin: auto 35%;
+        width: 30%;
+        height: 215px;
+    }
+}
+
+/*----------------------------------------*/
+
+/*----------------------------------------*/
+
+@media (max-width:767px)
+{
+    .modal-approval-confirm .modal-dialog
+    {
+        margin: auto 15%;
+        width: 70%;
+        height: 350px;
+    }
+}
+@media (min-width: 768px)
+{
+    .modal-approval-confirm .modal-dialog
+    {
+        margin: auto 15%;
+        width: 70%;
+        height: 350px;
+    }
+}
+@media (min-width: 992px)
+{
+    .modal-approval-confirm .modal-dialog
+    {
+        margin: auto 20%;
+        width: 60%;
+        height: 350px;
+    }
+}
+@media (min-width: 1200px)
+{
+    .modal-approval-confirm .modal-dialog
+    {
+        margin: auto 35%;
+        width: 30%;
+        height: 350px;
+    }
+}
+
+/*----------------------------------------*/
+
+@media (max-width:767px)
+{
+    .modalDetail .modal-dialog
+    {
+        margin: auto 5%;
+        width: 90%;
+        height: 80%;
+    }
+    .modalDetailWorkingCalendarEntry .modal-dialog
+    {
+        margin: auto 5%;
+        width: 90%;
+        height: 230px;
+    }
+    
+    .modalDetailAttendance .modal-dialog
+    {
+        margin: auto 5%;
+        width: 90%;
+        height: 300px;
+    }
+}
+@media (min-width: 768px)
+{
+    .modalDetail .modal-dialog
+    {
+        margin: auto 5%;
+        width: 90%;
+        height: 80%;
+    }
+     .modalDetailWorkingCalendarEntry .modal-dialog
+    {
+        margin: auto 10%;
+        width: 80%;
+        height: 230px;
+    }
+    
+    .modalDetailAttendance .modal-dialog
+    {
+        margin: auto 5%;
+        width: 90%;
+        height: 300px;
+    }
+}
+@media (min-width: 992px)
+{
+    .modalDetail .modal-dialog
+    {
+        margin: auto 15%;
+        width: 70%;
+        height: 80%;
+    }
+    .modalDetailWorkingCalendarEntry .modal-dialog
+    {
+       margin: auto 35%;
+       width: 30%;
+       height: 230px;
+        
+    }
+    .modalDetailAttendance .modal-dialog
+    {
+        margin: auto 15%;
+        width: 70%;
+        height: 300px;
+    }
+}
+@media (min-width: 1200px)
+{
+    .modalDetail .modal-dialog
+    {
+        margin: auto 25%;
+        width: 50%;
+        height: 80%;
+    }   
+    .modalDetailWorkingCalendarEntry .modal-dialog
+    {
+        margin: auto 35%;
+        width: 30%;
+        height: 230px;
+    }
+    .modalDetailAttendance .modal-dialog
+    {
+        margin: auto 22%;
+        width: 56%;
+        height: 300px;
+    }
+}
+
+.text-dark {
+  color: #343a40 !important;
+}
+
+a.text-dark:focus, a.text-dark:hover {
+  color: #1d2124 !important;
+}
+
+@media (min-width: 576px) {
+  .text-sm-left {
+    text-align: left !important;
+  }
+  .text-sm-right {
+    text-align: right !important;
+  }
+  .text-sm-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-md-left {
+    text-align: left !important;
+  }
+  .text-md-right {
+    text-align: right !important;
+  }
+  .text-md-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-lg-left {
+    text-align: left !important;
+  }
+  .text-lg-right {
+    text-align: right !important;
+  }
+  .text-lg-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-xl-left {
+    text-align: left !important;
+  }
+  .text-xl-right {
+    text-align: right !important;
+  }
+  .text-xl-center {
+    text-align: center !important;
+  }
+}
+
+/*-------- 出勤区分＝所定休日 -----------*/
+.table > thead > tr > td.attendance,
+.table > tbody > tr > td.attendance,
+.table > tfoot > tr > td.attendance,
+.table > thead > tr > th.attendance,
+.table > tbody > tr > th.attendance,
+.table > tfoot > tr > th.attendance,
+.table > thead > tr.attendance > td,
+.table > tbody > tr.attendance > td,
+.table > tfoot > tr.attendance > td,
+.table > thead > tr.attendance > th,
+.table > tbody > tr.attendance > th,
+.table > tfoot > tr.attendance > th {
+  background-color:RGB(189,215,238);
+  /*border-color:  #ffe699;
+  border-width: 3px;*/
+}
+.table-hover > tbody > tr > td.attendance:hover,
+.table-hover > tbody > tr > th.attendance:hover,
+.table-hover > tbody > tr.attendance:hover > td,
+.table-hover > tbody > tr:hover > .attendance,
+.table-hover > tbody > tr.attendance:hover > th {
+  background-color: #ffefbf;
+}
+
+.table > thead > tr > td.attendance-full-time,
+.table > tbody > tr > td.attendance-full-time,
+.table > tfoot > tr > td.attendance-full-time,
+.table > thead > tr > th.attendance-full-time,
+.table > tbody > tr > th.attendance-full-time,
+.table > tfoot > tr > th.attendance-full-time,
+.table > thead > tr.attendance-full-time > td,
+.table > tbody > tr.attendance-full-time > td,
+.table > tfoot > tr.attendance-full-time > td,
+.table > thead > tr.attendance-full-time > th,
+.table > tbody > tr.attendance-full-time > th,
+.table > tfoot > tr.attendance-full-time > th {
+  background-color:#ffe699
+  /*border-color:  #ffe699;
+  border-width: 3px;*/
+}
+.table-hover > tbody > tr > td.attendance-full-time:hover,
+.table-hover > tbody > tr > th.attendance-full-time:hover,
+.table-hover > tbody > tr.attendance-full-time:hover > td,
+.table-hover > tbody > tr:hover > .attendance-full-time,
+.table-hover > tbody > tr.attendance-full-time:hover > th {
+  background-color: #ffefbf;
+}
+
+/*-------- 出勤区分＝法定休日 -----------*/
+.table > thead > tr > td.legal,
+.table > tbody > tr > td.legal,
+.table > tfoot > tr > td.legal,
+.table > thead > tr > th.legal,
+.table > tbody > tr > th.legal,
+.table > tfoot > tr > th.legal,
+.table > thead > tr.legal > td,
+.table > tbody > tr.legal > td,
+.table > tfoot > tr.legal > td,
+.table > thead > tr.legal > th,
+.table > tbody > tr.legal > th,
+.table > tfoot > tr.legal > th {
+  background-color: #ffccff;
+  /*border-color:  #ffccff;
+  border-width: 3px;*/
+}
+.table-hover > tbody > tr > td.legal:hover,
+.table-hover > tbody > tr > th.legal:hover,
+.table-hover > tbody > tr.legal:hover > td,
+.table-hover > tbody > tr:hover > .legal,
+.table-hover > tbody > tr.legal:hover > th {
+  background-color: #ffd6ff;
+}
+
+/*-------- 出勤区分＝法定休日（祝日） -----------*/
+.table > thead > tr > td.legal-holiday,
+.table > tbody > tr > td.legal-holiday,
+.table > tfoot > tr > td.legal-holiday,
+.table > thead > tr > th.legal-holiday,
+.table > tbody > tr > th.legal-holiday,
+.table > tfoot > tr > th.legal-holiday,
+.table > thead > tr.legal-holiday > td,
+.table > tbody > tr.legal-holiday > td,
+.table > tfoot > tr.legal-holiday > td,
+.table > thead > tr.legal-holiday > th,
+.table > tbody > tr.legal-holiday > th,
+.table > tfoot > tr.legal-holiday > th {
+  background-color: #ff9999;
+  /*border-color:  #ff9999;
+  border-width: 3px;*/
+}
+.table-hover > tbody > tr > td.legal-holiday:hover,
+.table-hover > tbody > tr > th.legal-holiday:hover,
+.table-hover > tbody > tr.legal-holiday:hover > td,
+.table-hover > tbody > tr:hover > .legal-holiday,
+.table-hover > tbody > tr.legal-holiday:hover > th {
+  background-color: #ffa3a3;
+}
+
+/*-------- 出勤区分＝出勤日（土・日）-----------*/
+.table > thead > tr > td.work-weekend,
+.table > tbody > tr > td.work-weekend,
+.table > tfoot > tr > td.work-weekend,
+.table > thead > tr > th.work-weekend,
+.table > tbody > tr > th.work-weekend,
+.table > tfoot > tr > th.work-weekend,
+.table > thead > tr.work-weekend > td,
+.table > tbody > tr.work-weekend > td,
+.table > tfoot > tr.work-weekend > td,
+.table > thead > tr.work-weekend > th,
+.table > tbody > tr.work-weekend > th,
+.table > tfoot > tr.work-weekend > th {  
+    position: relative;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > td.work-weekend > div{	
+    border-color: #ffccff;
+    border-width: 3px;
+	border-style: solid;	
+	width: 97%;
+    height: 34px;
+    padding-top: 4px;
+    margin: auto;
+    margin-left: 1px;
+}
+
+.table-hover > tbody > tr > td.work-weekend:hover,
+.table-hover > tbody > tr > th.work-weekend:hover,
+.table-hover > tbody > tr.work-weekend:hover > td,
+.table-hover > tbody > tr:hover > .work-weekend,
+.table-hover > tbody > tr.work-weekend:hover > th {
+  background-color: #d1e3f3;
+}
+
+.table > thead > tr > td.work-weekend-saturday,
+.table > tbody > tr > td.work-weekend-saturday,
+.table > tfoot > tr > td.work-weekend-saturday,
+.table > thead > tr > th.work-weekend-saturday,
+.table > tbody > tr > th.work-weekend-saturday,
+.table > tfoot > tr > th.work-weekend-saturday,
+.table > thead > tr.work-weekend-saturday > td,
+.table > tbody > tr.work-weekend-saturday > td,
+.table > tfoot > tr.work-weekend-saturday > td,
+.table > thead > tr.work-weekend-saturday > th,
+.table > tbody > tr.work-weekend-saturday > th,
+.table > tfoot > tr.work-weekend-saturday > th {  
+    position: relative;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > td.work-weekend-saturday > div{	
+    border-color:RGB(189,215,238);
+    border-width: 3px;
+	border-style: solid;	
+	width: 97%;
+    height: 34px;
+    padding-top: 4px;
+    margin: auto;
+    margin-left: 1px;
+}
+
+/*-------- 出勤区分＝出勤日（祝日）-----------*/
+.table > thead > tr > td.work-holiday,
+.table > tbody > tr > td.work-holiday,
+.table > tfoot > tr > td.work-holiday,
+.table > thead > tr > th.work-holiday,
+.table > tbody > tr > th.work-holiday,
+.table > tfoot > tr > th.work-holiday,
+.table > thead > tr.work-holiday > td,
+.table > tbody > tr.work-holiday > td,
+.table > tfoot > tr.work-holiday > td,
+.table > thead > tr.work-holiday > th,
+.table > tbody > tr.work-holiday > th,
+.table > tfoot > tr.work-holiday > th {
+    position: relative;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > td.work-holiday > div{	
+    border-color: #ff9999;
+    border-width: 3px;
+	border-style: solid;	
+	width: 97%;
+    height: 34px;
+    padding-top: 4px;
+    margin: auto;
+    margin-left: 1px;
+}
+
+.table-hover > tbody > tr > td.work-holiday:hover,
+.table-hover > tbody > tr > th.work-holiday:hover,
+.table-hover > tbody > tr.work-holiday:hover > td,
+.table-hover > tbody > tr:hover > .work-holiday,
+.table-hover > tbody > tr.work-holiday:hover > th {
+  background-color: #afceeb;
+}
+
+.table > thead > tr > td.work-holiday-transfer,
+.table > tbody > tr > td.work-holiday-transfer,
+.table > tfoot > tr > td.work-holiday-transfer,
+.table > thead > tr > th.work-holiday-transfer,
+.table > tbody > tr > th.work-holiday-transfer,
+.table > tfoot > tr > th.work-holiday-transfer,
+.table > thead > tr.work-holiday-transfer > td,
+.table > tbody > tr.work-holiday-transfer > td,
+.table > tfoot > tr.work-holiday-transfer > td,
+.table > thead > tr.work-holiday-transfer > th,
+.table > tbody > tr.work-holiday-transfer > th,
+.table > tfoot > tr.work-holiday-transfer > th {
+    position: relative;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > td.work-holiday-transfer > div{	
+    border-color: #ffccff;
+    border-width: 3px;
+	border-style: solid;	
+	width: 97%;
+    height: 34px;
+    padding-top: 4px;
+    margin: auto;
+    margin-left: 1px;
+}
+
+.table-hover > tbody > tr > td.work-holiday-transfer:hover,
+.table-hover > tbody > tr > th.work-holiday-transfer:hover,
+.table-hover > tbody > tr.work-holiday-transfer:hover > td,
+.table-hover > tbody > tr:hover > .work-holiday-transfer,
+.table-hover > tbody > tr.work-holiday-transfer:hover > th {
+  background-color: #afceeb;
+}
+
+/*-------- 有給休暇予定日 -----------*/
+.table > thead > tr > td.paid-leave,
+.table > tbody > tr > td.paid-leave,
+.table > tfoot > tr > td.paid-leave,
+.table > thead > tr > th.paid-leave,
+.table > tbody > tr > th.paid-leave,
+.table > tfoot > tr > th.paid-leave,
+.table > thead > tr.paid-leave > td,
+.table > tbody > tr.paid-leave > td,
+.table > tfoot > tr.paid-leave > td,
+.table > thead > tr.paid-leave > th,
+.table > tbody > tr.paid-leave > th,
+.table > tfoot > tr.paid-leave > th {
+  background-color: #e2f0d9;
+  /*border-color:  #ff9999;
+  border-width: 3px;*/
+}
+.table-hover > tbody > tr > td.paid-leave:hover,
+.table-hover > tbody > tr > th.paid-leave:hover,
+.table-hover > tbody > tr.paid-leave:hover > td,
+.table-hover > tbody > tr:hover > .paid-leave,
+.table-hover > tbody > tr.paid-leave:hover > th {
+  background-color: #c5e0b4;
+}
+
+/*-------- 出勤区分＝所定休日 -----------*/
+.bg-attendance
+{
+  background-color: RGB(189,215,238);
+  height: 17px;
+  width: 19px;
+  /*border-color:  #ffe699;
+  border-width: 3px;*/
+  margin-bottom: 2px !important;
+}
+
+.bg-attendance-off
+{
+  background-color:#ffe699;
+  height: 17px;
+  width: 19px;
+  /*border-color:  #ffe699;
+  border-width: 3px;*/
+  margin-bottom: 2px !important;
+}
+
+/*-------- 出勤区分＝法定休日 -----------*/
+.bg-legal {
+  background-color: #ffccff;
+  height: 17px;
+  width: 19px;
+  /*border-color:  #ffccff;
+  border-width: 3px;*/
+  margin-bottom: 2px !important;
+}
+
+/*-------- 出勤区分＝法定休日（祝日） -----------*/
+.bg-legal-holiday {
+  background-color: #ff9999;
+  height: 17px;
+  width: 19px;
+  /*border-color:  #ff9999;
+  border-width: 3px;*/
+  margin-bottom: 2px !important;
+}
+
+/*-------- 出勤区分＝出勤日（土・日）-----------*/
+.bg-work-weekend{	
+    height: 17px;
+    width: 19px;
+    border: 2px solid #ffccff;
+    margin-bottom: 2px !important;
+}
+
+.bg-work-weekend-saturday{	
+    height: 17px;
+    width: 19px;
+    border: 2px solid RGB(189,215,238);
+    margin-bottom: 2px !important;
+}
+
+/*-------- 出勤区分＝出勤日（祝日）-----------*/
+.bg-work-holiday{	
+    height: 17px;
+    width: 19px;
+    border: 2px solid #ff9999;
+    margin-bottom: 2px !important;
+}
+
+.bg-work-nomal
+{
+    vertical-align: bottom;
+    border: 2px solid #ddd;
+    height: 17px;
+    width: 19px;
+    margin-bottom: 2px !important;
+
+ }
+ 
+ .bg-checkbox-ivent
+{
+    vertical-align: bottom;
+    border-radius: 50%;
+    border: 1px solid #000000; 
+    height: 17px;
+    width: 19px;
+    margin-bottom: 2px !important;
+
+ }
+ 
+ /*-------- 有給休暇予定日 -----------*/
+.bg-paid-leave {
+  background-color: #e2f0d9;
+  height: 17px;
+  width: 19px;
+  /*border-color:  #ffccff;
+  border-width: 3px;*/
+  margin-bottom: 2px !important;
+}
+ 
+ /*-------- テキストカラー-----------*/
+.text-color-holiday
+{
+    color:Red;
+}
+.text-color-saturday
+{
+    color: Blue;
+}
+.text-color-normalday
+{
+    color: Black;
+}
+/*-------- テーブルヘッダ-----------*/
+.table-header
+{
+    background-color: #f5f5f5;
+}
+/*---------------------------------*/
+/*FrmWorkingCalendarEntry*/
+
+.table-treeview
+{
+    border-style:solid;
+    /*height:400px;*/
+    overflow-y: auto;
+    border-color: #e3e3e3;
+    border: 1px solid #e3e3e3;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: none;
+}
+.header-table-treeview
+{
+    min-height: 20px;
+    padding: 19px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    padding: 9px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.checkbox-ivent-circle
+{
+    border-color: #000000;
+    border-radius: 50%;
+    border-width: 1px;
+	border-style: solid;	
+	width: 70%;
+   
+    padding-top: 0px;
+    margin: auto;   
+}
+
+.handle  
+{
+    background-color: #DDD; 
+    cursor: move; 
+    width: 150px; 
+    margin: 5px auto 0px auto; 
+    text-align: center; 
+    padding: 5px; 
+}
+
+.light-gray {
+  color: #333;
+  background-color: #eaeaea !important;
+}
+
+.alert-light-gray {
+    color: #333 !important;
+    background-color: #eaeaea !important;
+    border-color: #ebccd1;
+}

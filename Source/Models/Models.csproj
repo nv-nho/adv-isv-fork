@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81C1A840-D188-4190-A158-C065107D370D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OMS.Models</RootNamespace>
+    <AssemblyName>Models</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovalInfo.cs" />
+    <Compile Include="AttendanceDetailInfo.cs" />
+    <Compile Include="AttendanceHeaderInfo.cs" />
+    <Compile Include="AttendanceSummaryInfo.cs" />
+    <Compile Include="AttendanceVacation.cs" />
+    <Compile Include="AttendanceVacationInfo.cs" />
+    <Compile Include="AuthorityInfo.cs" />
+    <Compile Include="Base\M_Base.cs" />
+    <Compile Include="Base\M_Company.cs" />
+    <Compile Include="Base\M_Config_D.cs" />
+    <Compile Include="Base\M_Config_H.cs" />
+    <Compile Include="Base\M_Department.cs" />
+    <Compile Include="Base\M_GroupUser_H.cs" />
+    <Compile Include="Base\M_GroupUser_D.cs" />
+    <Compile Include="Base\M_Information.cs" />
+    <Compile Include="Base\M_Message.cs" />
+    <Compile Include="Base\M_Project.cs" />
+    <Compile Include="Base\M_Setting.cs" />
+    <Compile Include="Base\T_Expence_D.cs" />
+    <Compile Include="Base\T_Expence_H.cs" />
+    <Compile Include="Base\T_Mail_H.cs" />
+    <Compile Include="Base\T_Mail_D.cs" />
+    <Compile Include="Base\M_User.cs" />
+    <Compile Include="Base\M_WorkingSystem.cs" />
+    <Compile Include="Base\T_Attendance.cs" />
+    <Compile Include="Base\T_PaidVacation.cs" />
+    <Compile Include="Base\T_WorkingCalendar_D.cs" />
+    <Compile Include="Base\T_WorkingCalendar_H.cs" />
+    <Compile Include="Base\T_WorkingCalendar_U.cs" />
+    <Compile Include="Base\T_Cost_D.cs" />
+    <Compile Include="Base\T_Work_D.cs" />
+    <Compile Include="Base\T_Cost_H.cs" />
+    <Compile Include="Base\T_Work_H.cs" />
+    <Compile Include="Base\T_AttendanceResult.cs" />
+    <Compile Include="Base\T_VacationResult.cs" />
+    <Compile Include="Base\T_WorkResult.cs" />
+    <Compile Include="Base\T_Payslip.cs" />
+    <Compile Include="Base\T_PaidLeave.cs" />
+    <Compile Include="ConfigInfo.cs" />
+    <Compile Include="Constant.cs" />
+    <Compile Include="ContentInfo.cs" />
+    <Compile Include="CostInfo.cs" />
+    <Compile Include="DepartmentInfo.cs" />
+    <Compile Include="DropDownModel.cs" />
+    <Compile Include="ExpenceInfo.cs" />
+    <Compile Include="MailInfo.cs" />
+    <Compile Include="PayslipInfo.cs" />
+    <Compile Include="PayslipUploadInfo.cs" />
+    <Compile Include="ProjectInfo.cs" />
+    <Compile Include="ProjectProfitInfo.cs" />
+    <Compile Include="Type\Enums.cs" />
+    <Compile Include="SettingInfo.cs" />
+    <Compile Include="Type\DataStatus.cs" />
+    <Compile Include="Type\DefaultButton.cs" />
+    <Compile Include="Type\QuotationDetailType.cs" />
+    <Compile Include="GroupUserInfo.cs" />
+    <Compile Include="LoginInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserCalendar.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="InformationInfo.cs" />
+    <Compile Include="WorkingCalendarInfo.cs" />
+    <Compile Include="WorkingSystemInfo.cs" />
+    <Compile Include="AttendanceApprovalInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{34C8C563-F7DD-45F9-9D24-40C4EE109D2B}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F73EA9E0-AD40-4CA6-9F71-7D0D248EA493}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OMS.DAC</RootNamespace>
+    <AssemblyName>DAC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApprovalService.cs" />
+    <Compile Include="AttendanceService.cs" />
+    <Compile Include="BaseService.cs" />
+    <Compile Include="CompanyService.cs" />
+    <Compile Include="Config_DService.cs" />
+    <Compile Include="Config_HService.cs" />
+    <Compile Include="Cost_DService.cs" />
+    <Compile Include="Cost_HService.cs" />
+    <Compile Include="DB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DepartmentService.cs" />
+    <Compile Include="Expence_DService.cs" />
+    <Compile Include="Expence_HService.cs" />
+    <Compile Include="GroupUserService.cs" />
+    <Compile Include="InformationService.cs" />
+    <Compile Include="MessageService.cs" />
+    <Compile Include="PaysplipService.cs" />
+    <Compile Include="PaysplipUploadService.cs" />
+    <Compile Include="ProjectProfitService.cs" />
+    <Compile Include="ProjectService.cs" />
+    <Compile Include="SettingService.cs" />
+    <Compile Include="T_PaidVacationService.cs" />
+    <Compile Include="T_WorkingCalendar_DService.cs" />
+    <Compile Include="T_WorkingCalendar_HService.cs" />
+    <Compile Include="T_WorkingCalendar_UService.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkingSystemService.cs" />
+    <Compile Include="Mail_DService.cs" />
+    <Compile Include="Work_DService.cs" />
+    <Compile Include="Mail_HService.cs" />
+    <Compile Include="Work_HService.cs" />
+    <Compile Include="AttendanceResultService.cs" />
+    <Compile Include="VacationResultService.cs" />
+    <Compile Include="WorkResultService.cs" />
+    <Compile Include="T_PaidLeaveService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{81C1A840-D188-4190-A158-C065107D370D}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{34C8C563-F7DD-45F9-9D24-40C4EE109D2B}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

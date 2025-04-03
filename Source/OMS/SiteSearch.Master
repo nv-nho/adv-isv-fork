@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteSearch.master.cs"
+    Inherits="OMS.SiteSearch" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="~/Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body
+        {
+            min-height: 100%;
+            padding-top: 10px;
+            font-family: "メイリオ", Meiryo, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, sans-serif;
+        }
+
+        .negative-num
+        {
+            color: Red;
+        }
+        .input-code.upper
+        {
+            text-transform: uppercase;
+        }
+        
+        #loading
+        {
+            background: url("../Images/loading.GIF") no-repeat scroll center center #ffffff;
+            z-index: 10;
+            filter: alpha(opacity=75);
+            -moz-opacity: 0.75;
+            opacity: 0.75;
+        }
+
+        .btn-export
+        {
+            color: #fff;
+            background-color: #9360b0;
+            border-color: #6f5499;
+        }
+        .btn-export:hover, .btn-export:focus, .btn-export:active, .btn-export.active, .open > .dropdown-toggle.btn-export
+        {
+            color: #fff;
+            background-color: #7d459c;
+            border-color: #62307e;
+        }
+        .btn-export:active, .btn-export.active, .open > .dropdown-toggle.btn-export
+        {
+            background-image: none;
+        }
+        .btn-export.disabled, .btn-export[disabled], fieldset[disabled] .btn-export, 
+        .btn-export.disabled:hover, 
+        .btn-export[disabled]:hover, fieldset[disabled] 
+        .btn-export:hover, 
+        .btn-export.disabled:focus, 
+        .btn-export[disabled]:focus, fieldset[disabled] 
+        .btn-export:focus, 
+        .btn-export.disabled:active, 
+        .btn-export[disabled]:active, fieldset[disabled] 
+        .btn-export:active, 
+        .btn-export.disabled.active, 
+        .btn-export[disabled].active, fieldset[disabled] .btn-export.active
+        {
+            background-color: #9360b0;
+            border-color: #6f5499;
+        }
+        .btn-export .badge
+        {
+            color: #9360b0;
+            background-color: #fff;
+        }
+    </style>
+    <title>
+        <asp:ContentPlaceHolder ID="TitleWeb" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+</head>
+<body>
+    <div id="loading" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">        
+    </div>
+    <div class="container">
+        <div id="success" class="alert alert-success hidden" role="alert">
+            <span class="glyphicon glyphicon-ok-sign"></span><strong> Updated successfully! (Cap nhat thanh cong!)</strong>
+        </div>
+        <form runat="server" id="frmSearch" role="form">
+            <h4>
+                <span class="label label-default">
+                    <asp:ContentPlaceHolder ID="Title" runat="server">
+                    </asp:ContentPlaceHolder>
+                </span>
+            </h4>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="modal fade" id="modalQuestion" tabindex="-1" role="dialog" aria-labelledby="questionTitle" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog modal-sm modal-vertical-centered">
+                    <div class="modal-content">
+                        <div class="modal-body" id="questionMessage" runat="server">
+                            <span class="glyphicon glyphicon-question-sign"></span>
+                        </div>
+                        <div class="modal-footer">
+                            <asp:LinkButton ID="btnYes" runat="server" class="btn btn-default">Yes</asp:LinkButton>
+                            <asp:LinkButton ID="btnNo" runat="server" class="btn btn-default" Visible="false">No</asp:LinkButton>
+                            <asp:Button ID="btnNo1" runat="server" Text="No" class="btn btn-default" data-dismiss="modal" Visible="false"/>                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="hide">
+        <input type="hidden" id="specials_e" value='<%=OMS.Utilities.Constants.SPECIALS_E%>'/>
+    </div>
+   
+    <script src="../Scripts/jquery.js" type="text/javascript"></script>
+    <script src="../Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../Scripts/moment.min.js" type="text/javascript"></script>
+    <script src="../Scripts/bootstrap-switch.min.js" type="text/javascript"></script>
+    <script src="../Scripts/bootstrap-datetimepicker.js"></script>
+    <script src="../Scripts/oms.js" type="text/javascript"></script>
+    <script src="../Scripts/common.js" type="text/javascript"></script>
+    <script src="../Scripts/oms.windows.js" type="text/javascript"></script>
+   
+    <script language="javascript" type="text/javascript">
+        function closeWindow() {
+            window.opener.hideLoading();
+            window.close();
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
